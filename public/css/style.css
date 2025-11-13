@@ -107,6 +107,13 @@
     .site-footer__copyright {
         font-size: 0.85rem;
         margin-top: 1rem;
+        flex-direction: column;
+        text-align: center;
+    }
+    .site-footer__copyright-left,
+    .site-footer__copyright-right {
+        text-align: center;
+        width: 100%;
     }
 }
 
@@ -424,10 +431,34 @@ a:focus-visible {
 
 .site-footer__copyright {
     width: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 1.8rem;
     font-size: 0.9rem;
     color: #7a7059;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.site-footer__copyright-left {
+    text-align: left;
+}
+
+.site-footer__copyright-right {
+    text-align: right;
+}
+
+.site-footer__copyright a {
+    color: #ff7d1a;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.site-footer__copyright a:hover {
+    color: #ff9f1c;
+    text-decoration: underline;
 }
 
 @media (max-width: 720px) {
